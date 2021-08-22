@@ -27,6 +27,15 @@ function App() {
 			date: new Date(2021, 2, 25),
 		},
 	];
+
+	// FIXME Ini adalah syntax jika menggunakan syntax React versi lama.
+	// return React.createElement(
+	// 	"div",
+	// 	{},
+	// 	React.createElement("h2", {}, "Let's get started!"),
+	// 	React.createElement(Expenses, { items: expenses })
+	// );
+
 	return (
 		<div>
 			<h2>Let's get started!</h2>
