@@ -1,6 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 
-function App() {
+const App = () => {
 	const expenses = [
 		{
 			id: "e1",
@@ -28,7 +28,7 @@ function App() {
 		},
 	];
 
-	// FIXME Ini adalah syntax jika menggunakan syntax React versi lama.
+	// FIXME Ini adalah syntax jika menggunakan syntax React versi lama. Tapi harus import React from "react";
 	// return React.createElement(
 	// 	"div",
 	// 	{},
@@ -42,6 +42,6 @@ function App() {
 			<Expenses items={expenses} />
 		</div>
 	);
-}
+};
 // TODO Membuat dynamic web application (Lecture 40 - Summary)
 export default App;
