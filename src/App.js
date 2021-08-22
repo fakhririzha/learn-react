@@ -34,5 +34,5 @@ function App() {
 		</div>
 	);
 }
-
+// TODO Membuat dynamic web application (Lecture 40 - Summary)
 export default App;
