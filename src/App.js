@@ -45,4 +45,5 @@ const App = () => {
 };
 // TODO Membuat dynamic web application (Lecture 40 - Summary)
 // TODO Membuat bentuk arrow function pada tiap-tiap components (Lecture 42 - Arrow Functions)
+// TODO Lecture 44
 export default App;
