@@ -29,6 +29,11 @@ const App = () => {
 		},
 	];
 
+	const addExpenseHandler = (expense) => {
+		console.log("In App.js");
+		console.log(expense);
+	};
+
 	// FIXME Ini adalah syntax jika menggunakan syntax React versi lama. Tapi harus import React from "react";
 	// return React.createElement(
 	// 	"div",
@@ -39,7 +44,7 @@ const App = () => {
 
 	return (
 		<div>
-			<NewExpense />
+			<NewExpense onAddExpense={addExpenseHandler} />
 			<Expenses items={expenses} />
 		</div>
 	);
