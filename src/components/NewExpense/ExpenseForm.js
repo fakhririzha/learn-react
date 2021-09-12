@@ -5,42 +5,25 @@ const ExpenseForm = (props) => {
 	const [enteredTitle, setEnteredTitle] = useState("");
 	const [enteredAmount, setEnteredAmount] = useState("");
 	const [enteredDate, setEnteredDate] = useState("");
-	// const [userInput, setUserInput] = useState({
-	// 	enteredTitle: "",
-	// 	enteredAmount: "",
-	// 	enteredDate: "",
-	// });
+	const [newExpenseAction, setNewExpenseAction] = useState("");
 
 	const titleChangeHandler = (event) => {
 		setEnteredTitle(event.target.value);
-		// setUserInput({
-		// 	...userInput,
-		// 	enteredTitle: event.target.value,
-		// });
-		// setUserInput((prevState) => {
-		// 	return { ...prevState, enteredTitle: event.target.value };
-		// });
 	};
 
 	const amountChangeHandler = (event) => {
 		setEnteredAmount(event.target.value);
-		// setUserInput({
-		// 	...userInput,
-		// 	enteredAmount: event.target.value,
-		// });
-		// setUserInput((prevState) => {
-		// 	return { ...prevState, enteredAmount: event.target.value };
-		// });
 	};
 	const dateChangeHandler = (event) => {
 		setEnteredDate(event.target.value);
-		// setUserInput({
-		// 	...userInput,
-		// 	enteredDate: event.target.value,
-		// });
-		// setUserInput((prevState) => {
-		// 	return { ...prevState, enteredDate: event.target.value };
-		// });
+	};
+
+	const newExpenseButtonHandler = () => {
+		setNewExpenseAction("Clicked");
+	};
+
+	const newExpenseCancelButtonHandler = () => {
+		setNewExpenseAction("");
 	};
 
 	const submitHandler = (event) => {
@@ -57,7 +40,18 @@ const ExpenseForm = (props) => {
 		setEnteredTitle("");
 		setEnteredAmount("");
 		setEnteredDate("");
+		setNewExpenseAction("");
 	};
+
+	if (newExpenseAction !== "Clicked") {
+		return (
+			<div className="new-expense-button__actions">
+				<button onClick={newExpenseButtonHandler} type="submit">
+					Tambah Pengeluaran Baru
+				</button>
+			</div>
+		);
+	}
 
 	return (
 		<form onSubmit={submitHandler}>
@@ -92,6 +86,7 @@ const ExpenseForm = (props) => {
 				</div>
 			</div>
 			<div className="new-expense__actions">
+				<button onClick={newExpenseCancelButtonHandler}>Batal</button>
 				<button type="submit">Tambah Pengeluaran</button>
 			</div>
 		</form>
