@@ -31,7 +31,7 @@ const ExpenseForm = (props) => {
 
 		const expenseData = {
 			title: enteredTitle,
-			amount: enteredAmount,
+			amount: +enteredAmount,
 			date: new Date(enteredDate),
 		};
 
@@ -40,18 +40,7 @@ const ExpenseForm = (props) => {
 		setEnteredTitle("");
 		setEnteredAmount("");
 		setEnteredDate("");
-		// setNewExpenseAction("");
 	};
-
-	// if (newExpenseAction !== "Clicked") {
-	// 	return (
-	// 		<div className="new-expense-button__actions">
-	// 			<button onClick={newExpenseButtonHandler} type="submit">
-	// 				Tambah Pengeluaran Baru
-	// 			</button>
-	// 		</div>
-	// 	);
-	// }
 
 	return (
 		<form onSubmit={submitHandler}>
@@ -86,7 +75,6 @@ const ExpenseForm = (props) => {
 				</div>
 			</div>
 			<div className="new-expense__actions">
-				{/* <button onClick={newExpenseCancelButtonHandler}>Batal</button> */}
 				<button type="button" onClick={props.onCancel}>
 					Batal
 				</button>
