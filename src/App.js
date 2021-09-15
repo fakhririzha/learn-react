@@ -38,14 +38,6 @@ const App = () => {
 		});
 	};
 
-	// FIXME Ini adalah syntax jika menggunakan syntax React versi lama. Tapi harus import React from "react";
-	// return React.createElement(
-	// 	"div",
-	// 	{},
-	// 	React.createElement("h2", {}, "Let's get started!"),
-	// 	React.createElement(Expenses, { items: expenses })
-	// );
-
 	return (
 		<div>
 			<NewExpense onAddExpense={addExpenseHandler} />
